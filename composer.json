@@ -1,5 +1,5 @@
 {
-    "name": "shabbir-islam/contao-accessi-kit-contao-bundle",
+    "name": "shabbirislam/contao-accessi-kit-contao-bundle",
     "description": "A Contao extension package designed to maximise the accessibility of websites. It helps web developers and administrators to effortlessly ensure compliance with WCAG 2.1 and EU directives to create an inclusive user experience for all.",
     "license": "LGPL-3.0-or-later",
     "type": "contao-bundle",
