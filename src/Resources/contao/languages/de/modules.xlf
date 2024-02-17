@@ -2,11 +2,14 @@
 <xliff version="1.1">
   <file datatype="php" original="src/Resources/contao/languages/de/modules.php" source-language="de">
     <body>
-      <trans-unit id="MOD.my_module.0">
-        <source>My Module</source>
+      <trans-unit id="MOD.web_accessibility.0">
+        <source>Web Accessibility</source>
       </trans-unit>
-      <trans-unit id="MOD.my_module.1">
-        <source>Manage entries of my module</source>
+      <trans-unit id="MOD.web_accessibility.1">
+        <source>
+            Stellt Tools und Funktionen bereit, um die Zugänglichkeit der Website zu verbessern
+            und sie barrierefrei für Benutzer mit verschiedenen Behinderungen zu machen.
+        </source>
       </trans-unit>
     </body>
   </file>
