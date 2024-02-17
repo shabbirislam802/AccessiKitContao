@@ -1,3 +1,9 @@
 services:
     _defaults:
         autoconfigure: true
+    SI\ContaoAccessiKitContaoBundle\Controller\FrontendModule\ExampleModuleController:
+        tags:
+            -   name: contao.frontend_module
+                category: miscellaneous
+                template: mod_example_module
+                renderer: forward
