@@ -1,15 +1,31 @@
 <?php
 
-namespace SI\ContaoAccessiKitContaoBundle\View\BackendModule;
+namespace SI\ContaoAccessiKitContaoBundle\Controller\BackendModule;
 
 use Contao\PageModel;
+use Contao\FrontendTemplate;
+use Contao\System;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Twig\Environment;
 
-class TestModuleView extends AbstractController
+class TestController extends AbstractController
 {
+
     public function generate(): string
     {
-        $test = $this->render('test.html.twig');
+        $container = System::getContainer();
+
+        $template = new FrontendTemplate('my_front_end_template');
+        $template->someData = 'foobar';
+        $buffer = $template->parse();
+        if (null === ($twig = $container->get('twig', ContainerInterface::NULL_ON_INVALID_REFERENCE)))
+        {
+            return '';
+        }
+        dump($container);
+        dump($twig->render('@Contao_ContaoAccessiKitContaoBundle/test.html.twig', ['html' => $this->getPagesSelectHtml()]));
+        //dump($this->render('@Contao_ContaoAccessiKitContaoBundle/test.html.twig'));
         return '<fieldset id="pal_global_legend" class="tl_tbox">
                     <legend>Barrierefreiheit-Analyse Einstellungen</legend>'
             . $this->getPagesSelectHtml() .

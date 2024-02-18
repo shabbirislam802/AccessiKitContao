@@ -16,5 +16,5 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class ContaoAccessiKitContaoBundle extends Bundle
 {
-
+  
 }

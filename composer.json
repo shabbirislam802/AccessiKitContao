@@ -21,7 +21,10 @@
         "symfony/dependency-injection": "^5.4",
         "symfony/http-kernel": "^5.4",
         "contao/easy-coding-standard": "^6.7",
-        "symfony/console": "^5.4"
+        "symfony/console": "^5.4",
+        "twig/twig": "^3.8",
+        "symfony/twig-bundle": "^5.4",
+        "twig/extra-bundle": "^3.8"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.5",
