@@ -1,0 +1,36 @@
+{% block content %}
+    <div id="tl_buttons">
+        <a href="{{ backUrl }}" class="header_back" title="">Zurück</a>
+    </div>
+    <div class="tl_formbody_edit">
+        <fieldset id="pal_global_legend" class="tl_tbox">
+            <legend>Barrierefreiheit-Analyse Einstellungen</legend>
+            <div class="w50 widget">
+                <h3><label>Seite</label></h3>
+                <select name="pageSelect" id="ctrl_pageSelect" class="tl_select tl_chosen">
+                    {% for page in pages %}
+                        <option value="{{ page.urlPrefix ~ page.alias ~ page.urlSuffix }}">{{ page.title }}</option>
+                    {% endfor %}
+                </select>
+                <p class="tl_help tl_tip" title="">Bitte wählen Sie eine Seite für die Analyse aus.</p>
+            </div>
+            <div class="w50 widget">
+                <h3><label>Genauigkeitsklasse</label></h3>
+                <select name="accuracyClass" id="ctrl_accuracyClass" class="tl_select tl_chosen">
+                    <option value="">-</option>
+                    <option value="1">Genauigkeitsklasse 1</option>
+                    <option value="2">Genauigkeitsklasse 2</option>
+                    <option value="3">Genauigkeitsklasse 3</option>
+                    <option value="4">Genauigkeitsklasse 4</option>
+                </select>
+                <p class="tl_help tl_tip" title="">Bitte wählen Sie eine Genauigkeitsklasse für die Analyse der Seite
+                    aus.</p>
+            </div>
+        </fieldset>
+    </div>
+    <div class="tl_formbody_submit">
+        <div class="tl_submit_container">
+            <button id="analyse" class="tl_submit">Seite Analysieren</button>
+        </div>
+    </div>
+{% endblock %}

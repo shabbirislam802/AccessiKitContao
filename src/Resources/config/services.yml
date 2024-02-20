@@ -1,9 +1,8 @@
 services:
     _defaults:
         autoconfigure: true
-    SI\ContaoAccessiKitContaoBundle\Controller\FrontendModule\ExampleModuleController:
+    SI\ContaoAccessiKitContaoBundle\Migration\WebAccessibilityMigration:
+        arguments:
+            - '@database_connection'
         tags:
-            -   name: contao.frontend_module
-                category: miscellaneous
-                template: mod_example_module
-                renderer: forward
+            - { name: 'contao.migration', priority: 0 }
