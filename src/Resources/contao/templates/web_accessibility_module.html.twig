@@ -1,4 +1,5 @@
 {% block content %}
+    <!-- Analytics Form -->
     <div id="tl_buttons">
         <a href="{{ backUrl }}" class="header_back" title="">Zurück</a>
     </div>
@@ -7,7 +8,7 @@
             <legend>Barrierefreiheit-Analyse Einstellungen</legend>
             <div class="w50 widget">
                 <h3><label>Seite</label></h3>
-                <select name="pageSelect" id="ctrl_pageSelect" class="tl_select tl_chosen">
+                <select name="pageSelect" id="ctrl_pageSelect" class="tl_select wa-page-select">
                     {% for page in pages %}
                         <option value="{{ page.urlPrefix ~ page.alias ~ page.urlSuffix }}">{{ page.title }}</option>
                     {% endfor %}
@@ -16,8 +17,7 @@
             </div>
             <div class="w50 widget">
                 <h3><label>Genauigkeitsklasse</label></h3>
-                <select name="accuracyClass" id="ctrl_accuracyClass" class="tl_select tl_chosen">
-                    <option value="">-</option>
+                <select name="accuracyClass" id="ctrl_accuracyClass" class="tl_select wa-accuracy-select">
                     <option value="1">Genauigkeitsklasse 1</option>
                     <option value="2">Genauigkeitsklasse 2</option>
                     <option value="3">Genauigkeitsklasse 3</option>
@@ -30,7 +30,12 @@
     </div>
     <div class="tl_formbody_submit">
         <div class="tl_submit_container">
-            <button id="analyse" class="tl_submit">Seite Analysieren</button>
+            <button id="wa-analyse-btn" class="tl_submit">Seite Analysieren</button>
         </div>
     </div>
+    <!-- Analytics Form END -->
+
+    <!-- Report Result-->
+    <div id="wa-report"></div>
+    <!-- Report Result END -->
 {% endblock %}
