@@ -6,3 +6,10 @@ services:
             - '@database_connection'
         tags:
             - { name: 'contao.migration', priority: 0 }
+    SI\ContaoAccessiKitContaoBundle\Controller\FrontendModule\ExampleModuleController:
+        tags:
+            -   name: contao.frontend_module
+                category: user
+                template: mod_my_frontend_module
+                renderer: forward
+                method: __invoke

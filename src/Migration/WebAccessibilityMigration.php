@@ -18,6 +18,11 @@ class WebAccessibilityMigration extends AbstractMigration
         $this->connection = $connection;
     }
 
+    public function getName(): string
+    {
+        return 'Web Accessibility 0.0.1 Create';
+    }
+
     public function shouldRun(): bool
     {
 
@@ -37,7 +42,6 @@ class WebAccessibilityMigration extends AbstractMigration
                 CREATE TABLE tl_web_accessibility
                 (
                     id INT AUTO_INCREMENT NOT NULL,
-                    titel VARCHAR(255) NOT NULL,
                     PRIMARY KEY(id)
                 )
                 DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci`;'
