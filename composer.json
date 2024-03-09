@@ -20,7 +20,7 @@
         "symfony/config": "^5.4",
         "symfony/dependency-injection": "^5.4",
         "symfony/http-kernel": "^5.4",
-        "contao/easy-coding-standard": "^6.7",
+        "contao/easy-coding-standard": "^6.7"
     },
     "require-dev": {
         "bamarni/composer-bin-plugin": "^1.5",
