@@ -2,6 +2,7 @@
 
 namespace SI\ContaoAccessiKitContaoBundle\Controller\BackendModule;
 
+use Contao\BackendUser;
 use Contao\PageModel;
 use Contao\System;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -11,6 +12,11 @@ class WebAccessibilityModuleController
 
     public function generate(): string
     {
+        $user = BackendUser::getInstance();
+        if (!$user->isAdmin) {
+            return 'Zugriff verweigert. Diese Funktion ist nur für Administratoren verfügbar.';
+        }
+
         $container = System::getContainer();
         $router = $container->get('router');
 

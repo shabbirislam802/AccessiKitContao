@@ -1,7 +1,6 @@
 <?php
 
 $GLOBALS['BE_MOD']['content']['web_accessibility'] = [
-    'tables' => ['tl_web_accessibility'],
     'javascript' => [
         'bundles/contaoaccessikitcontao/js/libraries/dompurify/purify.min.js',
         'bundles/contaoaccessikitcontao/js/libraries/html2canvas/html2canvas.min.js',
