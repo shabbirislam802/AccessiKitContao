@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         //Delete
-        /*switch (reportType) {
+        switch (reportType) {
             case "4":
                 data = {
                     "status": {
@@ -624,12 +624,11 @@ document.addEventListener("DOMContentLoaded", () => {
         reportDomDiv.innerHTML = html;
         pageAnalyticDomButton.removeAttribute('disabled');
         showLoader(false);
-        return;*/
+        return;
         //END Delete
         fetch(`https://wave.webaim.org/api/request?key=v8hHxuP53645&url=${fullPageUrl}&format=json&reporttype=${reportType}`, requestOptions)
             .then((response) => response.json())
             .then((result) => {
-                data = result;
                 let html = generateReportHtml(result);
                 reportDomDiv.innerHTML = html;
             })
@@ -772,7 +771,14 @@ document.addEventListener("DOMContentLoaded", () => {
             Object.entries(data.categories).forEach(([categoryName, categoryDetails]) => {
                 if (categoryDetails.items) {
                     Object.entries(categoryDetails.items).forEach(([itemId, itemDetails]) => {
-                        let detailText = itemDetails.xpaths ? itemDetails.xpaths.join(", ") : 'N/A';
+                        let detailText = 'N/A';
+
+                        if (itemDetails.xpaths && itemDetails.xpaths.length > 0) {
+                            detailText = itemDetails.xpaths.join(", ");
+                        } else if (itemDetails.selectors && itemDetails.selectors.length > 0) {
+                            detailText = itemDetails.selectors.join(", ");
+                        }
+
                         let row = [
                             itemId,
                             itemDetails.description,
