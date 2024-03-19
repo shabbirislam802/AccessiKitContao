@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         //Delete
-        switch (reportType) {
+        /*switch (reportType) {
             case "4":
                 data = {
                     "status": {
@@ -624,7 +624,7 @@ document.addEventListener("DOMContentLoaded", () => {
         reportDomDiv.innerHTML = html;
         pageAnalyticDomButton.removeAttribute('disabled');
         showLoader(false);
-        return;
+        return;*/
         //END Delete
         fetch(`https://wave.webaim.org/api/request?key=v8hHxuP53645&url=${fullPageUrl}&format=json&reporttype=${reportType}`, requestOptions)
             .then((response) => response.json())
