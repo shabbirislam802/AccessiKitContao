@@ -1,5 +1,5 @@
 <?php
-use Contao\Backend
+use Contao\Backend;
 use Contao\DC_Table;
 use SI\ContaoAccessiKitContaoBundle\Model\WebAccessibilityModel;
 
