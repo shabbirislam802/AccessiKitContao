@@ -1,3 +1,4 @@
-app.controller:
-  resource: ../../../src/Controller/API
+contaoAccessiKitContaoBundle.controller:
+  resource: '@ContaoAccessiKitContaoBundle/Controller'
   type: annotation
+

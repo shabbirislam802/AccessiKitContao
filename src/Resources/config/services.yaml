@@ -1,17 +1,12 @@
 services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
-    SI\ContaoAccessiKitContaoBundle\Controller\FrontendModule\ExampleModuleController:
-        tags:
-            -   name: contao.frontend_module
-                category: user
-                template: mod_my_frontend_module
-                renderer: forward
-                method: __invoke
-    SI\ContaoAccessiKitContaoBundle\Controller\API\:
-      resource: '../../../src/Controller/API'
-      tags: [ 'controller.service_arguments' ]
-    SI\ContaoAccessiKitContaoBundle\Controller\API\WebAccessibilityController:
-      arguments:
-        $framework: '@contao.framework'
+  _defaults:
+    autoconfigure: true
+
+  #Hooks
+  SI\ContaoAccessiKitContaoBundle\EventListener\OutputBackendTemplateListener:
+    tags:
+      - { name: contao.hook, hook: outputBackendTemplate, priority: 100 }
+
+  SI\ContaoAccessiKitContaoBundle\EventListener\LoadDataContainerListener:
+    tags:
+      - { name: contao.hook, hook: loadDataContainer, priority: 100 }
