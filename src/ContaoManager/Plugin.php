@@ -12,11 +12,15 @@ declare(strict_types=1);
 
 namespace SI\ContaoAccessiKitContaoBundle\ContaoManager;
 
+use Contao\CommentsBundle\ContaoCommentsBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
+use Contao\ListingBundle\ContaoListingBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
+use Contao\NewsBundle\ContaoNewsBundle;
+use Contao\NewsletterBundle\ContaoNewsletterBundle;
 use SI\ContaoAccessiKitContaoBundle\ContaoAccessiKitContaoBundle;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -28,7 +32,7 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
     {
         return [
             BundleConfig::create(ContaoAccessiKitContaoBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
+                ->setLoadAfter([ContaoCoreBundle::class, ContaoNewsletterBundle::class, ContaoNewsBundle::class, ContaoListingBundle::class, ContaoCommentsBundle::class]),
         ];
     }
 

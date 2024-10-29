@@ -43,7 +43,7 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
     ],
     'palettes' => [
         '__selector__' => ['accessibility_guidelines'],  // Selector für accessibility_guidelines
-        'default' => '{guidelines_legend},accessibility_guidelines,is_required;{advanced_settings_legend},advanced_checks;',
+        'default' => '{guidelines_legend},accessibility_guidelines,is_required,is_meta_data_required;{advanced_settings_legend},advanced_checks;',
     ],
     'subpalettes' => [
         'accessibility_guidelines_wcag' => 'wcag_level',  // Subpalette für die Option "WCAG 2.1"
@@ -83,6 +83,13 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
         ],
         'is_required' => [
             'label' => ['Verpflichtete Felder', 'Wählen Sie, ob wichtige Barrierefreiheitsfelder als Pflichtfelder markiert werden.'],
+            'inputType' => 'checkbox',
+            'eval' => ['mandatory' => false],
+            'sql' => "char(1) NOT NULL default ''",
+            'explanation' => 'Durch diese Einstellung werden die wichtigen Felder zur Barrierefreiheit als Pflichtfelder im Backend markiert.',
+        ],
+        'is_meta_data_required' => [
+            'label' => ['Media-Meta Daten verpflichten', 'Wählen Sie, ob wichtige Media-Meta Daten als Pflichtfelder markiert werden soll.'],
             'inputType' => 'checkbox',
             'eval' => ['mandatory' => false],
             'sql' => "char(1) NOT NULL default ''",

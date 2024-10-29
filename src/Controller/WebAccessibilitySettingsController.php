@@ -27,7 +27,8 @@ class WebAccessibilitySettingsController
                 'accessibility_guidelines' => $settings->accessibility_guidelines,
                 'wcag_level' => $settings->wcag_level,
                 'is_required' => $settings->is_required,
-                'advanced_checks' => $advancedChecks,  
+                'is_meta_data_required' => $settings->is_meta_data_required,
+                'advanced_checks' => $advancedChecks,
             ];
         }
 

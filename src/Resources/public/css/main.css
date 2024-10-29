@@ -1,118 +1,70 @@
-#wa-navigation-header{
+/*--- Backend form label ---*/
+.w50.widget .accessibility-icon-container{
+    margin-left: 5px;
+}
+
+.w50.widget h3{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-#wa-report{
-    border-top: 1px solid #e6e6e8;
-    padding: 15px 0;
+/*--- Widget ---*/
+#floating-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 300px;
+    font-family: Arial, sans-serif;
 }
 
-#wa-report h2.sub_headline{
-    margin: 3px 15px;
-}
-
-#wa-report .content{
-    margin: 0 15px;
-    border: none;
-}
-
-#wa-report .content .loader {
-    display: none;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 60px;
-    height: 60px;
-    margin: auto;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#accessibility-report {
-    margin: 20px;
-    padding: 20px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-}
-
-#accessibility-report header {
-    padding: 10px 0;
-    text-align: center;
-}
-
-#accessibility-report main {
-    margin-top: 20px;
-}
-
-#accessibility-report details {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-#accessibility-report summary {
-    font-weight: bold;
-    margin: -10px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#accessibility-report .item-detail {
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
-#accessibility-report .item-details-container {
-    margin-top: 15px;
-    padding: 15px 10px;
-    background-color: #e8e8e8;
-}
-
-#accessibility-report .btn-block{
+#toggle-widget {
     width: 100%;
-}
-#accessibility-report .load-information-btn {
-    width: 100%;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #007bff;
+    padding: 10px;
+    background: #007bff;
     color: white;
+    font-size: 16px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
-#accessibility-report button:hover {
-    background-color: #0056b3;
+#widget-content {
+    display: none;
+    background: white;
+    border: 4px solid #000;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 14px;
 }
 
-.item-xpaths, .item-selectors {
-    margin-top: 5px;
-    font-size: 0.9em;
+.accordion-item h4 {
+    cursor: pointer;
+    padding: 5px;
+    background: #ddd;
+    margin: 0;
 }
 
-.item-xpaths ul, .item-selectors ul {
-    margin: 5px 0;
-    padding-left: 20px;
+.accordion-item-content {
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
-.item-xpaths li, .item-selectors li {
-    list-style-type: circle;
+.accordion-item-content div {
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Farbliche Markierungen für die Erfüllungszustände */
+.accordion-item-content div[data-result="Fulfilled"] {
+    color: green;
+}
+
+.accordion-item-content div[data-result="Partially Fulfilled"] {
+    color: blue;
+}
+
+.accordion-item-content div[data-result="Not Fulfilled"] {
+    color: red;
 }
 

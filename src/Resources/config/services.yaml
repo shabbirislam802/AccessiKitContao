@@ -10,3 +10,11 @@ services:
   SI\ContaoAccessiKitContaoBundle\EventListener\LoadDataContainerListener:
     tags:
       - { name: contao.hook, hook: loadDataContainer, priority: 100 }
+
+  SI\ContaoAccessiKitContaoBundle\EventListener\ContentElementListener:
+    tags:
+      - { name: contao.hook, hook: getContentElement, priority: 100 }
+
+  SI\ContaoAccessiKitContaoBundle\EventListener\OutputFrontendTemplateListener:
+    tags:
+      - { name: contao.hook, hook: outputFrontendTemplate, priority: 100 }
