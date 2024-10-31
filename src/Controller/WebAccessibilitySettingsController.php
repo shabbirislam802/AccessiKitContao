@@ -21,18 +21,28 @@ class WebAccessibilitySettingsController
         $settingsArray = [];
 
         while ($settings->next()) {
-            $advancedChecks = !empty($settings->advanced_checks) ? unserialize($settings->advanced_checks) : [];
-
             $settingsArray[] = [
-                'accessibility_guidelines' => $settings->accessibility_guidelines,
-                'wcag_level' => $settings->wcag_level,
-                'is_required' => $settings->is_required,
-                'is_meta_data_required' => $settings->is_meta_data_required,
-                'advanced_checks' => $advancedChecks,
+                'extended_color_function' => (bool) $settings->extended_color_function,
+                'image_meta_data_function' => (bool) $settings->image_meta_data_function,
+                'media_caption_function' => (bool) $settings->media_caption_function,
+                'accessibility_setting_indication_function' => (bool) $settings->accessibility_setting_indication_function,
+                'accessibility_widget' => (bool) $settings->accessibility_widget,
+                'custom_text_field' => $settings->custom_text_field,
             ];
         }
 
         return json_encode($settingsArray);
     }
-}
 
+    public static function isMetaDataRequired(): bool
+    {
+        $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
+        return $settings !== null && (bool) $settings->image_meta_data_function;
+    }
+
+    public static function isWidgetActivated(): bool
+    {
+        $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
+        return $settings !== null && (bool) $settings->accessibility_widget;
+    }
+}

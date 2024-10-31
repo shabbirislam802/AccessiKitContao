@@ -3,7 +3,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "headline",
-            "name": "headline",
+            "name": "Headline",
             "criteria": [
                 {
                     "name": "9.1.3.1 Info and Relationships",
@@ -130,7 +130,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "text",
-            "name": "text",
+            "name": "Text",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -281,7 +281,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "list",
-            "name": "list",
+            "name": "List",
             "criteria": [
                 {
                     "name": "9.1.3.1 Info and Relationships",
@@ -432,7 +432,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "table",
-            "name": "table",
+            "name": "Table",
             "criteria": [
                 {
                     "name": "9.1.3.1 Info and Relationships",
@@ -583,7 +583,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "accordion",
-            "name": "accordion",
+            "name": "Accordion",
             "criteria": [
                 {
                     "name": "9.1.3.1 Info and Relationships",
@@ -770,7 +770,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "slider",
-            "name": "slider",
+            "name": "Slider",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -969,7 +969,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "file",
-            "name": "file",
+            "name": "File",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -1168,7 +1168,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "hyperlink",
-            "name": "hyperlink",
+            "name": "Hyperlink",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -1367,7 +1367,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "top link",
-            "name": "top link",
+            "name": "Top Link",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -1566,7 +1566,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "image",
-            "name": "image",
+            "name": "Image",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -1753,7 +1753,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "gallery",
-            "name": "gallery",
+            "name": "Gallery",
             "criteria": [
                 {
                     "name": "9.1.1.1 Non-text Content",
@@ -1964,7 +1964,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "video",
-            "name": "video",
+            "name": "Video",
             "criteria": [
                 {
                     "name": "7.1.1 Caption Playback",
@@ -2163,7 +2163,7 @@ let jsonElement = {
         {
             "type": "content element",
             "group": "audio",
-            "name": "audio",
+            "name": "Audio",
             "criteria": [
                 {
                     "name": "Non-text Content",

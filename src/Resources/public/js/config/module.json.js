@@ -3,7 +3,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "form",
-            "name": "form",
+            "name": "Form",
             "criteria": [
                 {
                     "name": "Labeling and Structure",
@@ -274,7 +274,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "listing",
-            "name": "listing",
+            "name": "Listing",
             "criteria": [
                 {
                     "name": "Labeling and Structure",
@@ -533,7 +533,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "search",
-            "name": "search",
+            "name": "Search",
             "criteria": [
                 {
                     "name": "Labeling and Structure",
@@ -780,7 +780,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "comment",
-            "name": "comment",
+            "name": "Comment",
             "criteria": [
                 {
                     "name": "Labeling and Structure",
@@ -1027,7 +1027,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "navigation",
-            "name": "navigation",
+            "name": "Navigation",
             "criteria": [
                 {
                     "name": "Labeling and Structure",
@@ -1238,7 +1238,7 @@ let jsonModule = {
         {
             "type": "module",
             "group": "news",
-            "name": "news",
+            "name": "News",
             "criteria": [
                 {
                     "name": "Non-text Content",

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const labelIds = [
             "ctrl_label", "ctrl_alt", "ctrl_titleText", "ctrl_linkTitle",
             "ctrl_caption", "ctrl_subtitleFile", "ctrl_audioDescription", "ctrl_subtitleLanguage",
-            "ctrl_textColor", "ctrl_backgroundColor"
+            "ctrl_textColor", "ctrl_backgroundColor", "ctrl_headerColor"
         ];
 
         labelIds.forEach(function(id) {
@@ -33,17 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Funktion beim Laden der Seite ausführen
-    addAccessibilityIcons();
+    if(settings[0]['accessibility_setting_indication_function'] == '1') {
+        addAccessibilityIcons();
 
-    // Event-Listener für die Checkbox, die die Funktion erneut ausführt
-    const checkbox = document.querySelector('#opt_overwriteMeta_0'); // Ersetze mit der ID der Checkbox
+        // Event-Listener für die Checkbox, die die Funktion erneut ausführt
+        const checkbox = document.querySelector('#opt_overwriteMeta_0'); // Ersetze mit der ID der Checkbox
 
-    if (checkbox) {
-        checkbox.addEventListener('change', function () {
-            if (checkbox.checked) {
-                addAccessibilityIcons(); // Funktion erneut ausführen, wenn die Checkbox aktiviert wird
-            }
-        });
+        if (checkbox) {
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    addAccessibilityIcons(); // Funktion erneut ausführen, wenn die Checkbox aktiviert wird
+                }
+            });
+        }
     }
 });

@@ -14,7 +14,7 @@ class OutputBackendTemplateListener
 
             $VERSION = '1.0.0';
             $scriptPaths = [
-                'bundles/contaoaccessikitcontao/js/accessibility.js?v=' . $VERSION,
+                'bundles/contaoaccessikitcontao/js/accessibilityIndication.js?v=' . $VERSION,
                 'bundles/contaoaccessikitcontao/js/mediaMeta.js?v=' . $VERSION,
                 'bundles/contaoaccessikitcontao/js/contrastChecker.js?v=' . $VERSION,
                 'bundles/contaoaccessikitcontao/js/config/element.json.js?v=' . $VERSION,
@@ -27,7 +27,8 @@ class OutputBackendTemplateListener
                 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'
             ];
 
-            $buffer .= "
+            if(WebAccessibilitySettingsController::isWidgetActivated()){
+                $buffer .= "
                 <div id='floating-widget' style='position:fixed; bottom:20px; right:20px; z-index:1000; width:300px;'>
                     <button id='toggle-widget' style='width:100%; padding:10px; background:#007bff; color:white; font-size:16px;'>
                         <i class='fa fa-bars'></i> Accessibility Criteria
@@ -37,18 +38,16 @@ class OutputBackendTemplateListener
                     </div>
                 </div>
             ";
+            }
 
-            // Füge Font Awesome hinzu
             foreach ($stylePath as $path){
                 $buffer .= "<link rel='stylesheet' href='". $path ."'/>";
             }
 
-            // Füge settings-Variable hinzu
             $buffer .= "<script>
                 const settings = JSON.parse('" . $accessibilitySettings . "');
             </script>";
 
-            // Iteriere über die Pfade und füge sie dem Buffer hinzu
             foreach ($scriptPaths as $path) {
                 $buffer .= "<script src='" . $path . "'></script>";
             }

@@ -1,24 +1,30 @@
 <?php
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['textColor'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_module']['textColor'],
+$GLOBALS['TL_DCA']['tl_content']['fields']['textColor'] = [
+    'label'     => ['Text Color', 'Choose a color for the text.'],
     'inputType' => 'text',
-    'eval'      => ['colorpicker' => true, 'maxlength' => 7, 'tl_class' => 'clr w50'],
+    'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
     'sql'       => "varchar(7) NOT NULL default ''"
 ];
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['backgroundColor'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_module']['backgroundColor'],
+$GLOBALS['TL_DCA']['tl_content']['fields']['headerColor'] = [
+    'label'     => ['Header Color', 'Choose a color for the header text.'],
     'inputType' => 'text',
-    'eval'      => ['colorpicker' => true, 'maxlength' => 7, 'tl_class' => 'clr w50'],
+    'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
     'sql'       => "varchar(7) NOT NULL default ''"
 ];
 
-// Neue Legend 'color_settings_legend' erstellen und Felder hinzufügen
+$GLOBALS['TL_DCA']['tl_content']['fields']['backgroundColor'] = [
+    'label'     => ['Button and Link Background Color', 'Choose a background color for buttons and links.'],
+    'inputType' => 'text',
+    'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
+    'sql'       => "varchar(7) NOT NULL default ''"
+];
+
 PaletteManipulator::create()
     ->addLegend('color_settings_legend', 'expert_legend', PaletteManipulator::POSITION_BEFORE)
-    ->addField(['textColor', 'backgroundColor'], 'color_settings_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField(['textColor', 'headerColor', 'backgroundColor'], 'color_settings_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('form', 'tl_module')
     ->applyToPalette('newslist', 'tl_module')
     ->applyToPalette('newsreader', 'tl_module')

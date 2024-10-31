@@ -47,14 +47,16 @@ class ContentElementListener
 
         if($contentModel->type === 'module'){
             $textColor = $contentModel->textColor;
+            $headerColor = $contentModel->headerColor;
             $backgroundColor = $contentModel->backgroundColor;
 
-            if ($textColor && $backgroundColor) {
+            if ($textColor && $headerColor && $backgroundColor) {
                 $buffer = str_replace(
                     '<div',
                     sprintf(
-                        '<div data-text-color="%s" data-background-color="%s"',
+                        '<div data-text-color="%s" data-header-color="%s" data-background-color="%s"',
                         htmlspecialchars($textColor, ENT_QUOTES),
+                        htmlspecialchars($headerColor, ENT_QUOTES),
                         htmlspecialchars($backgroundColor, ENT_QUOTES)
                     ),
                     $buffer
