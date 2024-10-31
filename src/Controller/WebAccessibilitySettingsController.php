@@ -3,6 +3,7 @@
 namespace SI\ContaoAccessiKitContaoBundle\Controller;
 
 use SI\ContaoAccessiKitContaoBundle\Model\WebAccessibilitySettingsModel;
+use Contao\Database;
 
 class WebAccessibilitySettingsController
 {
@@ -36,13 +37,19 @@ class WebAccessibilitySettingsController
 
     public static function isMetaDataRequired(): bool
     {
-        $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
-        return $settings !== null && (bool) $settings->image_meta_data_function;
+        if (Database::getInstance()->tableExists('tl_web_accessibility_settings')) {
+            $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
+            return $settings !== null && (bool) $settings->image_meta_data_function;
+        }
+        return false;
     }
 
     public static function isWidgetActivated(): bool
     {
-        $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
-        return $settings !== null && (bool) $settings->accessibility_widget;
+        if (Database::getInstance()->tableExists('tl_web_accessibility_settings')) {
+            $settings = WebAccessibilitySettingsModel::findOneBy(['id=?'], [1]);
+            return $settings !== null && (bool) $settings->accessibility_widget;
+        }
+        return false;
     }
 }
