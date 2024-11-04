@@ -45,25 +45,36 @@ class ContentElementListener
             );
         }
 
-        if($contentModel->type === 'module'){
+        if ($contentModel->type === 'module' || $contentModel->type === 'headline' || $contentModel->type === 'text' || $contentModel->type === 'list' || $contentModel->type === 'table') {
             $textColor = $contentModel->textColor;
             $headerColor = $contentModel->headerColor;
             $backgroundColor = $contentModel->backgroundColor;
+            $elementLanguage = $contentModel->elementLanguage;
 
-            if ($textColor && $headerColor && $backgroundColor) {
+            $attributes = [];
+
+            if ($textColor) {
+                $attributes[] = sprintf('data-text-color="%s"', htmlspecialchars($textColor, ENT_QUOTES));
+            }
+            if ($headerColor) {
+                $attributes[] = sprintf('data-header-color="%s"', htmlspecialchars($headerColor, ENT_QUOTES));
+            }
+            if ($backgroundColor) {
+                $attributes[] = sprintf('data-background-color="%s"', htmlspecialchars($backgroundColor, ENT_QUOTES));
+            }
+            if ($elementLanguage) {
+                $attributes[] = sprintf('data-element-language="%s"', htmlspecialchars($elementLanguage, ENT_QUOTES));
+            }
+
+            if (!empty($attributes)) {
                 $buffer = str_replace(
                     '<div',
-                    sprintf(
-                        '<div data-text-color="%s" data-header-color="%s" data-background-color="%s"',
-                        htmlspecialchars($textColor, ENT_QUOTES),
-                        htmlspecialchars($headerColor, ENT_QUOTES),
-                        htmlspecialchars($backgroundColor, ENT_QUOTES)
-                    ),
+                    sprintf('<div %s', implode(' ', $attributes)),
                     $buffer
                 );
             }
         }
+
         return $buffer;
     }
 }
-

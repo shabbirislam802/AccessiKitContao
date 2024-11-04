@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/de/tl_web_accessibility_settings.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_web_accessibility_settings.guidelines_legend">
+                <source>Guidelines</source>
+                <target>Guidelines</target>
+            </trans-unit>
+            <trans-unit id="tl_web_accessibility_settings.description_legend">
+                <source>How the Accessi-Kit works</source>
+                <target>How the Accessi-Kit works</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

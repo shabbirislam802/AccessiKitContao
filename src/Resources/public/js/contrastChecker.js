@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const contrastWarning = document.createElement('p');
             contrastWarning.classList.add('contrast-warning');
             contrastWarning.style.color = 'red';
-            contrastWarning.textContent = "Warnung: Der Kontrast zwischen Text- und Hintergrundfarbe ist zu gering und erfüllt nicht die WCAG 2.1 Anforderung.";
+            contrastWarning.textContent = "Warning: The contrast between text and background color is too low and does not meet the WCAG 2.1 requirement.";
 
             function hexToRgb(hex) {
                 var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;

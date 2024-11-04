@@ -18,6 +18,18 @@ let jsonModule = {
                     "category": 9
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Contrast Check",
                     "description": "Verify that text has a contrast ratio of at least 4.5:1 against the background.",
                     "wcag": {
@@ -64,6 +76,18 @@ let jsonModule = {
                     "solution": "Ensure form layout reflows for all screen sizes.",
                     "result": "Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Text Resizing",
@@ -299,6 +323,30 @@ let jsonModule = {
                     "solution": "Arrange elements in a logical sequence for easy navigation.",
                     "result": "Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Keyboard Accessibility",
@@ -560,6 +608,18 @@ let jsonModule = {
                     "category": 9
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Keyboard Accessibility",
                     "description": "Ensure all form elements (input, radio buttons, submit) are accessible via keyboard.",
                     "wcag": {
@@ -805,6 +865,18 @@ let jsonModule = {
                     "solution": "Reorder elements to follow a logical navigation sequence, including the checkbox.",
                     "result": "Partially Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Keyboard Accessibility",
@@ -1054,6 +1126,18 @@ let jsonModule = {
                     "category": 9
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Keyboard Accessibility",
                     "description": "Ensure all links and submenus are keyboard accessible without traps.",
                     "wcag": {
@@ -1277,6 +1361,18 @@ let jsonModule = {
                     "category": 9
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Orientation",
                     "description": "Test adaptability of news module in different orientations.",
                     "wcag": {
@@ -1299,6 +1395,18 @@ let jsonModule = {
                     "solution": "Identify input fields for autofill.",
                     "result": "Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Use of Colour",
@@ -1558,6 +1666,18 @@ let jsonModule = {
                     "result": "Fulfilled"
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Orientation",
                     "description": "Test the calendar module in different screen orientations (portrait and landscape).",
                     "wcag": {
@@ -1611,6 +1731,18 @@ let jsonModule = {
                     },
                     "solution": "Ensure content reflows to fit smaller screens without horizontal scrolling.",
                     "result": "Not Fulfilled"
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Non-text Contrast",
@@ -1752,6 +1884,18 @@ let jsonModule = {
                     "result": "Fulfilled"
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Orientation",
                     "description": "Test the event list module in different screen orientations.",
                     "wcag": {
@@ -1794,6 +1938,18 @@ let jsonModule = {
                     },
                     "solution": "Ensure text resizing does not affect functionality or content.",
                     "result": "Fulfilled"
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Reflow",
@@ -1944,6 +2100,18 @@ let jsonModule = {
                     },
                     "solution": "The reading and navigation order should follow the logical sequence of the form elements.",
                     "result": "Fulfilled"
+                },
+                {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Orientation",
@@ -2206,6 +2374,18 @@ let jsonModule = {
                     "result": "Fulfilled"
                 },
                 {
+                    "name": "Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
                     "name": "Orientation",
                     "description": "Switch between portrait and landscape orientations to ensure the layout adjusts properly.",
                     "wcag": {
@@ -2226,6 +2406,18 @@ let jsonModule = {
                     },
                     "solution": "Information should not rely solely on color.",
                     "result": "Fulfilled"
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 },
                 {
                     "name": "Contrast (Minimum)",

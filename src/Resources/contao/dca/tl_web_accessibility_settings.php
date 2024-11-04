@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
         ],
         'label' => [
             'fields' => ['id'],
-            'format' => 'Barrierefreiheit Einstellungen',
+            'format' => 'Accessibility Settings',
         ],
         'global_operations' => [
             'all' => [
@@ -36,14 +36,13 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
         ],
         'operations' => [
             'edit' => [
-                'label' => ['Bearbeiten', 'Datensatz bearbeiten'],
                 'href' => 'act=edit',
-                'icon' => 'edit.gif'
+				'icon' => 'edit.svg'
             ]
         ],
     ],
     'palettes' => [
-        'default' => '{description_legend},text_override_callback;{guidelines_legend},extended_color_function,image_meta_data_function,media_caption_function,accessibility_setting_indication_function,accessibility_widget;',
+        'default' => '{description_legend},text_override_callback;{language_settings_legend},enable_language_setting;{guidelines_legend},extended_color_function,image_meta_data_function,media_caption_function,accessibility_setting_indication_function,accessibility_widget;',
     ],
     'fields' => [
         'id' => [
@@ -51,6 +50,12 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
         ],
         'tstamp' => [
             'sql' => ['type' => 'integer', 'unsigned' => true, 'default' => 0],
+        ],
+        'enable_language_setting' => [
+            'label' => ['Enable Language Setting', 'Activate the language setting option for content and modules.'],
+            'inputType' => 'checkbox',
+            'eval' => ['mandatory' => false],
+            'sql' => "char(1) NOT NULL default ''",
         ],
         'extended_color_function' => [
             'label' => ['Extended color function', 'Activate extended color checking functionality.'],
@@ -71,7 +76,7 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
             'sql' => "char(1) NOT NULL default ''",
         ],
         'accessibility_setting_indication_function' => [
-            'label' => ['Accessibility setting indication function', 'Show indications for accessibility settings.'],
+            'label' => ['Accessibility setting indication function', 'Show indications for accessibility settings, especially useful with the Accessibility Widget.'],
             'inputType' => 'checkbox',
             'eval' => ['mandatory' => false],
             'sql' => "char(1) NOT NULL default ''",
@@ -98,29 +103,32 @@ class tl_web_accessibility_settings extends Backend
     {
         $html = '<div class="widget">';
 
+        // Enable Language Setting Explanation
+        $html .= '<h3>Enable Language Setting</h3>';
+        $html .= '<p>This option enables editors to set language-specific configurations for text elements in content and modules. By activating this, the editor can specify if an element should be rendered in a particular language, enhancing accessibility on multilingual sites.</p>';
+
         // Extended Color Function Explanation
         $html .= '<h3>Extended Color Function</h3>';
-        $html .= '<p>This function adds color selection fields to modules, enabling users to choose colors for text, headers, and buttons. As colors are entered, the function checks if they meet contrast requirements for accessibility. If not, a notification appears, prompting the user to adjust the color combination for better accessibility.</p>';
+        $html .= '<p>This function adds color selection fields to modules, allowing users to set colors for text, headers, and buttons. The function checks color contrast for accessibility, notifying users if adjustments are needed to improve accessibility.</p>';
 
         // Image Meta Data Function Explanation
         $html .= '<h3>Image Meta Data Function</h3>';
-        $html .= '<p>In the files section, images that lack ALT text metadata are visually marked with an icon <i class="fas fa-wheelchair" style="color: red;"></i>. This indicates which images need ALT text for improved accessibility, allowing editors to add it where necessary.</p>';
+        $html .= '<p>In the files section, images without ALT text metadata are marked with an icon <i class="fas fa-wheelchair" style="color: red;"></i>. This highlights images that require ALT text, allowing editors to add necessary metadata for accessibility.</p>';
 
         // Media Caption Function Explanation
         $html .= '<h3>Media Caption Function</h3>';
-        $html .= '<p>This function enhances video and audio elements by allowing users to add subtitles and audio descriptions, which are critical for accessibility. It ensures that these media types provide the necessary information for users with disabilities.</p>';
+        $html .= '<p>This function supports accessibility for video and audio by allowing subtitles and audio descriptions. It ensures that these media types include necessary information for users with disabilities.</p>';
 
         // Accessibility Setting Indication Function Explanation
         $html .= '<h3>Accessibility Setting Indication Function</h3>';
-        $html .= '<p>This function highlights essential accessibility settings within elements and modules, marked with <i class="fas fa-wheelchair" style="color: blue;"></i>. These settings guide editors to make necessary adjustments to enhance accessibility.</p>';
+        $html .= '<p>This function highlights essential accessibility settings within elements and modules with an icon <i class="fas fa-wheelchair" style="color: blue;"></i>. When combined with the Accessibility Widget, it provides editors a comprehensive view of accessibility requirements and adjustments to improve content accessibility.</p>';
 
         // Accessibility Widget Explanation
         $html .= '<h3>Accessibility Widget</h3>';
-        $html .= '<p>This floating widget, which can be found on the bottom right corner, provides information on key accessibility requirements. It is organized by element and module, offering an overview of which requirements are met and which still need attention. It also provides guidance on how to address unmet requirements.</p>';
+        $html .= '<p>This floating widget provides an overview of accessibility requirements per element and module, showing which criteria are met and offering guidance on unmet requirements. This tool works effectively alongside the Accessibility Setting Indication Function for a thorough accessibility check.</p>';
 
         $html .= '</div>';
 
         return $html;
     }
 }
-

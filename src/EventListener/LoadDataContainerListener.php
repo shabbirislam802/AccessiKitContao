@@ -10,7 +10,6 @@ class LoadDataContainerListener
     public function __invoke(string $table): void
     {
         if ($table === 'tl_web_accessibility_settings') {
-            // Check if the table exists to avoid errors
             if (Database::getInstance()->tableExists('tl_web_accessibility_settings')) {
                 $existingRecord = WebAccessibilitySettingsModel::findAll();
 

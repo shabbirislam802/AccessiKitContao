@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const labelIds = [
             "ctrl_label", "ctrl_alt", "ctrl_titleText", "ctrl_linkTitle",
             "ctrl_caption", "ctrl_subtitleFile", "ctrl_audioDescription", "ctrl_subtitleLanguage",
-            "ctrl_textColor", "ctrl_backgroundColor", "ctrl_headerColor"
+            "ctrl_textColor", "ctrl_backgroundColor", "ctrl_headerColor", "ctrl_contentLanguage",
+            "ctrl_playerOptions", "ctrl_playerCaption"
         ];
 
         labelIds.forEach(function(id) {
@@ -37,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
         addAccessibilityIcons();
 
         // Event-Listener für die Checkbox, die die Funktion erneut ausführt
-        const checkbox = document.querySelector('#opt_overwriteMeta_0'); // Ersetze mit der ID der Checkbox
+        const checkbox = document.querySelector('#opt_overwriteMeta_0');
 
         if (checkbox) {
             checkbox.addEventListener('change', function () {
                 if (checkbox.checked) {
-                    addAccessibilityIcons(); // Funktion erneut ausführen, wenn die Checkbox aktiviert wird
+                    addAccessibilityIcons();
                 }
             });
         }

@@ -124,6 +124,18 @@ let jsonElement = {
                     "solution": "Use valid HTML markup to ensure content is parsed correctly by user agents.",
                     "result": "Fulfilled",
                     "category": 1
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -273,6 +285,30 @@ let jsonElement = {
                         "link": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
                     },
                     "solution": "Use ARIA attributes and semantic HTML to set names, roles, and values.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
                     "result": "Fulfilled",
                     "category": 1
                 }
@@ -426,6 +462,30 @@ let jsonElement = {
                     "solution": "Define proper names, roles, and values for assistive technology compatibility.",
                     "result": "Fulfilled",
                     "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -575,6 +635,30 @@ let jsonElement = {
                         "link": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
                     },
                     "solution": "Define proper names, roles, and values for table elements for assistive technology compatibility.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.3.1.2 Language of Parts",
+                    "description": "Specify the language of page content and any parts where the language changes.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html"
+                    },
+                    "solution": "Use the `lang` attribute to identify the default language and any changes in language within the content.",
                     "result": "Fulfilled",
                     "category": 1
                 }
@@ -762,6 +846,18 @@ let jsonElement = {
                         "link": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
                     },
                     "solution": "Ensure assistive technologies recognize the accordion controls and convey the open/closed state.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
                     "result": "Fulfilled",
                     "category": 1
                 }
@@ -961,6 +1057,18 @@ let jsonElement = {
                         "link": "https://www.w3.org/WAI/WCAG21/Understanding/parsing.html"
                     },
                     "solution": "Use valid HTML markup to avoid parsing errors.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
                     "result": "Fulfilled",
                     "category": 1
                 }
@@ -1361,6 +1469,18 @@ let jsonElement = {
                     "solution": "Ensure hyperlinks communicate accessible name, role, and value information.",
                     "result": "Fulfilled",
                     "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -1560,6 +1680,18 @@ let jsonElement = {
                     "solution": "Ensure the link communicates accessible name, role, and value information.",
                     "result": "Fulfilled",
                     "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -1745,6 +1877,18 @@ let jsonElement = {
                         "link": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html"
                     },
                     "solution": "Use semantic HTML and ARIA roles to convey the image’s purpose.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
                     "result": "Fulfilled",
                     "category": 1
                 }
@@ -1958,6 +2102,18 @@ let jsonElement = {
                     "solution": "Ensure valid HTML for accurate interpretation by user agents.",
                     "result": "Fulfilled",
                     "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -2157,6 +2313,18 @@ let jsonElement = {
                     "solution": "Define accessible names, roles, and values for player controls.",
                     "result": "Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
         },
@@ -2296,8 +2464,44 @@ let jsonElement = {
                     "solution": "Ensure the audio player and its controls have appropriate names, roles, and values.",
                     "result": "Fulfilled",
                     "category": 9
+                },
+                {
+                    "name": "9.1.4.2 Audio Control",
+                    "description": "Provide controls to pause, stop, or adjust the volume of audio that plays automatically for more than 3 seconds.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html"
+                    },
+                    "solution": "Add controls to allow users to pause, stop, or adjust the volume of automatically playing audio content.",
+                    "result": "Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.2.5 Audio Description (Pre-recorded)",
+                    "description": "Provide audio descriptions for pre-recorded video content with essential visual information.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level AA",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html"
+                    },
+                    "solution": "Include an audio description track or a text alternative that conveys important visual information in the video.",
+                    "result": "Not Fulfilled",
+                    "category": 1
+                },
+                {
+                    "name": "9.1.3.3 Sensory Characteristics",
+                    "description": "Ensure that instructions do not rely solely on sensory characteristics such as shape, color, size, visual location, orientation, or sound.",
+                    "wcag": {
+                        "wcag_level": true,
+                        "name": "WCAG 2.1 Level A",
+                        "link": "https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html"
+                    },
+                    "solution": "Provide instructions and information that are independent of sensory characteristics and include clear text descriptions.",
+                    "result": "Fulfilled",
+                    "category": 1
                 }
             ]
-        }
+        },
     ]
 };

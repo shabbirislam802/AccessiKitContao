@@ -23,6 +23,7 @@ class WebAccessibilitySettingsController
 
         while ($settings->next()) {
             $settingsArray[] = [
+                'enable_language_setting' => (bool) $settings->enable_language_setting,
                 'extended_color_function' => (bool) $settings->extended_color_function,
                 'image_meta_data_function' => (bool) $settings->image_meta_data_function,
                 'media_caption_function' => (bool) $settings->media_caption_function,

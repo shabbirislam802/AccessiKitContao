@@ -15,6 +15,7 @@ class OutputFrontendTemplateListener
             $scriptPaths = [
                 'bundles/contaoaccessikitcontao/js/playerCaption.js?v=' . $VERSION,
                 'bundles/contaoaccessikitcontao/js/colorModifier.js?v=' . $VERSION,
+                'bundles/contaoaccessikitcontao/js/languageAttributeHandler.js?v=' . $VERSION,
             ];
 
             $buffer .= "<script>

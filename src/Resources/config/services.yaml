@@ -18,3 +18,7 @@ services:
   SI\ContaoAccessiKitContaoBundle\EventListener\OutputFrontendTemplateListener:
     tags:
       - { name: contao.hook, hook: outputFrontendTemplate, priority: 100 }
+
+  SI\ContaoAccessiKitContaoBundle\EventListener\GetFrontendModuleListener:
+    tags:
+      - { name: contao.hook, hook: getFrontendModule, priority: 100 }

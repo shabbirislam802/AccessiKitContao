@@ -1,4 +1,5 @@
 <?php
+use Contao\System;
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['subtitleFile'] = [
@@ -30,21 +31,21 @@ PaletteManipulator::create()
 
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['textColor'] = [
-    'label'     => ['Text Color', 'Choose a color for the text.'],
+    'label'     => ['Text Color', 'Choose a color for the text. Enter a hexadecimal value without the # symbol, e.g., FF5733.'],
     'inputType' => 'text',
     'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
     'sql'       => "varchar(7) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['headerColor'] = [
-    'label'     => ['Header Color', 'Choose a color for the header text.'],
+    'label'     => ['Header Color', 'Choose a color for the header text. Enter a hexadecimal value without the # symbol, e.g., FF5733.'],
     'inputType' => 'text',
     'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
     'sql'       => "varchar(7) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['backgroundColor'] = [
-    'label'     => ['Button and Link Background Color', 'Choose a background color for buttons and links.'],
+    'label'     => ['Button and Link Background Color', 'Choose a background color for buttons and links. Enter a hexadecimal value without the # symbol, e.g., FF5733.'],
     'inputType' => 'text',
     'eval'      => [ 'maxlength' => 7, 'tl_class' => 'clr w50'],
     'sql'       => "varchar(7) NOT NULL default ''"
@@ -55,3 +56,17 @@ PaletteManipulator::create()
     ->addField(['textColor', 'headerColor', 'backgroundColor'], 'color_settings_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('module', 'tl_content');
 
+$GLOBALS['TL_DCA']['tl_content']['fields']['elementLanguage'] = [
+    'label'     => ['<label for="ctrl_contentLanguage">Content Language</label>', 'Select the language for this content element.'],
+    'inputType' => 'select',
+    'options'   => ['en' => 'English', 'de' => 'German'],
+    'eval'      => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
+    'sql'       => "varchar(5) NOT NULL default ''"
+];
+
+PaletteManipulator::create()
+    ->addField('elementLanguage', 'type_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('headline', 'tl_content')
+    ->applyToPalette('text', 'tl_content')
+    ->applyToPalette('list', 'tl_content')
+    ->applyToPalette('table', 'tl_content');

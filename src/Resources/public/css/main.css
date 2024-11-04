@@ -1,6 +1,7 @@
 /*--- Backend form label ---*/
 .w50.widget .accessibility-icon-container{
     margin-left: 5px;
+    display: inline-block;
 }
 
 .w50.widget h3{
