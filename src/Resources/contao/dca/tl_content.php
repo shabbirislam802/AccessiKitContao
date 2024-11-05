@@ -54,7 +54,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['backgroundColor'] = [
 PaletteManipulator::create()
     ->addLegend('color_settings_legend', 'expert_legend', PaletteManipulator::POSITION_BEFORE)
     ->addField(['textColor', 'headerColor', 'backgroundColor'], 'color_settings_legend', PaletteManipulator::POSITION_APPEND)
-    ->applyToPalette('module', 'tl_content');
+    ->applyToPalette('module', 'tl_content')
+    ->applyToPalette('form', 'tl_content');
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['elementLanguage'] = [
     'label'     => ['<label for="ctrl_contentLanguage">Content Language</label>', 'Select the language for this content element.'],

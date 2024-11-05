@@ -45,7 +45,7 @@ class ContentElementListener
             );
         }
 
-        if ($contentModel->type === 'module' || $contentModel->type === 'headline' || $contentModel->type === 'text' || $contentModel->type === 'list' || $contentModel->type === 'table') {
+        if ($contentModel->type === 'module' || $contentModel->type === 'form' || $contentModel->type === 'headline' || $contentModel->type === 'text' || $contentModel->type === 'list' || $contentModel->type === 'table') {
             $textColor = $contentModel->textColor;
             $headerColor = $contentModel->headerColor;
             $backgroundColor = $contentModel->backgroundColor;

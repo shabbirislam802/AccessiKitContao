@@ -42,7 +42,7 @@ $GLOBALS['TL_DCA']['tl_web_accessibility_settings'] = [
         ],
     ],
     'palettes' => [
-        'default' => '{description_legend},text_override_callback;{language_settings_legend},enable_language_setting;{guidelines_legend},extended_color_function,image_meta_data_function,media_caption_function,accessibility_setting_indication_function,accessibility_widget;',
+        'default' => '{description_legend},text_override_callback;{guidelines_legend},enable_language_setting,extended_color_function,image_meta_data_function,media_caption_function,accessibility_setting_indication_function,accessibility_widget;',
     ],
     'fields' => [
         'id' => [
