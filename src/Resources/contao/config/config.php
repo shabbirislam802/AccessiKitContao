@@ -15,41 +15,40 @@ $GLOBALS['TL_MODELS']['tl_web_accessibility_settings'] = WebAccessibilitySetting
 
 $filesystem = new Filesystem();
 
-// Basisverzeichnis des Bundles (von dem Verzeichnis, in dem dieses Skript liegt)
+// Base directory of the bundle (of the directory in which this script is located)
 $baseDir = System::getContainer()->getParameter('kernel.project_dir');
 
-// Dynamische Pfade für Quelle und Ziel
+// Dynamic paths for source and destination
 $sourceDir = $baseDir . '/vendor/shabbirislam/contao-accessi-kit-contao-bundle/src/Resources/contao/templates/twig';
 $targetDir = $baseDir . '/templates';
 
 try {
-    // Prüfen, ob das Quellverzeichnis existiert
+    // Check if the source directory exists
     if (!$filesystem->exists($sourceDir)) {
         throw new \Exception("Quellverzeichnis $sourceDir existiert nicht.");
     }
 
-    // Erstellt das Zielverzeichnis, falls es noch nicht existiert
+    // Create the target directory if it does not yet exist
     if (!$filesystem->exists($targetDir)) {
         $filesystem->mkdir($targetDir, 0755);
     }
 
-    // Finder initialisieren, um Dateien und Ordner im Quellverzeichnis zu durchsuchen
+    // Initialize the Finder to search through the files and folders in the source directory
     $finder = new Finder();
     $finder->files()->in($sourceDir);
 
     foreach ($finder as $file) {
-        // Quelle und Zielpfade für jede Datei ermitteln
+        // Determine the source and destination paths for each file
         $relativePath = $file->getRelativePathname();
         $sourceFilePath = $file->getRealPath();
         $targetFilePath = $targetDir . '/' . $relativePath;
 
-        // Prüfen, ob die Datei bereits im Zielverzeichnis existiert und ob sie identisch ist
+        // Check whether the file already exists in the target directory and whether it is identical
         if ($filesystem->exists($targetFilePath)) {
-            //echo "Überspringe bereits vorhandene Datei: $relativePath\n";
             continue;
         }
 
-        // Falls die Datei oder das Verzeichnis im Zielverzeichnis noch nicht existiert, kopieren
+        // If the file or directory does not yet exist in the target directory, copy it
         $filesystem->copy($sourceFilePath, $targetFilePath, true);
     }
 

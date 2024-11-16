@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const headerColor = element.getAttribute('data-header-color');
 
             if (textColor) {
-                element.querySelectorAll('*:not(button):not(a)').forEach(function (child) {
+                element.querySelectorAll('*').forEach(function (child) {
                     child.style.color = '#' + textColor;
                 });
             }
 
             if (backgroundColor) {
                 element.querySelectorAll('button, a').forEach(function (child) {
-                    child.style.backgroundColor = backgroundColor;
+                    child.style.backgroundColor = '#' + backgroundColor;
                 });
             }
 
